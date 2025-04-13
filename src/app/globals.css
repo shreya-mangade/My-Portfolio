@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables */
+:root {
+  --color-cyan-dark: #48D1CC;
+  --color-cyan-medium: #164E63;
+  --color-cyan-light: #00BFFF;
+  --color-bg-blend: #0b2d45;
+  --color-skill-bg: #1F2E3A;
+  --color-gray-light: #D1D5DB;
+  --color-gray-dark: #818386;
+
+  background-color: #182630;
+  color: white;
+}
+
+html,
+body {
+  font-family: 'Georgia', sans-serif;
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  @apply text-base;
+}
+
+main {
+  scroll-margin-top: 5rem;
+  @apply flex-1 pt-10 pb-10 px-10;
+}
+
+header {
+  @apply fixed top-0 left-0 w-full z-50 bg-[#182630] border-b border-[var(--color-cyan-light)] p-5 flex justify-between items-center;
+}
+
+footer {
+  @apply fixed bottom-0 left-0 w-full text-center border-t p-4 bg-[#182630];
+  color: var(--color-gray-light);
+  border-color: var(--color-cyan-light);
+  z-index: 50;
+}
+
+.headings {
+  @apply text-3xl underline underline-offset-8 pb-5;
+  text-decoration-color: var(--color-cyan-dark);
+}
+
+button {
+  @apply p-2 flex items-center justify-center rounded text-white transition duration-300 border cursor-pointer;
+  border-color: var(--color-cyan-light);
+}
+
+button:hover {
+  border-color: var(--color-cyan-dark);
+  color: var(--color-cyan-light);
+}
+
+.card {
+  @apply relative gap-4 p-4 my-4 rounded-lg border-l-4 shadow-lg text-base;
+  background-color: var(--color-skill-bg);
+  border-left-color: var(--color-cyan-dark);
+}
+
+.profileName {
+  @apply text-6xl py-5;
+}
+
+.skills-nav-bar {
+  @apply flex items-center justify-evenly text-center;
+  background-color: var(--color-bg-blend);
+}
+
+.skills-button {
+  @apply flex items-center justify-center gap-2 flex-1 py-3 transition duration-300;
+  border: none;
+}
+
+.skills-button:hover {
+  background-color: #083344;
+  color: white;
+}
+
+.skills-button.active {
+  @apply bg-gradient-to-r from-cyan-500 via-emerald-400 to-green-300;
+}
+
+.skills-card {
+  @apply grid gap-4 p-5 my-4 rounded-lg shadow-sm;
+  background-color: var(--color-skill-bg);
+}
+
+.form-input-icon {
+  @apply inline-flex items-center px-3 text-sm border border-e-0 rounded-s-md;
+  background-color: var(--color-gray-dark);
+  border-color: var(--color-gray-dark);
+}
+
+.form-input {
+  @apply rounded-none rounded-e-lg block flex-1 min-w-0 text-sm p-2.5;
+  background-color: var(--color-gray-light);
+  border-color: var(--color-gray-light);
+  color: black;
+}
+
+.experience-image {
+  @apply w-1/2 aspect-square mx-auto rounded-lg shadow-xl;
+  box-shadow: 0 4px 20px var(--color-cyan-dark);
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 1px;
+  height: 1.25em;
+  background-color: cyan;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
