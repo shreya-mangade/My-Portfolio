@@ -43,7 +43,6 @@ const experiences: ExperienceItem[] = [
         title: "Analyst",
         duration: "Mar 2022 - Jul 2023",
         details: [
-          "Collaborated with cross-functional applications team to gather requirements and implemented best practices to ensure high-quality, scalable, and tainable code within the Salesforce environment",
           "Engineered Lightning Web Components (LWC) to replace the legacy single-payment method in Financial Service, enabling multiple-payment methods and reducing rework by 70%",
           "Optimized SOAP APIs and backend services, ensuring 15% less downtime for customers with 150+ financial accounts",
           "Implemented 10+ real-time API callouts with MuleSoft, enhancing data exchange and system integration",
